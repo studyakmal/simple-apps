@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'devops1-akmal' }
+    agent { label 'svr1-akmal' }
 
     stages {
         stage('Pull SCM') {
