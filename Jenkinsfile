@@ -42,7 +42,12 @@ pipeline {
 
         stage('Approval1') {
             steps {
-                input message: 'Yakin di approve nih boss?', ok: 'Yes, I am sure!'
+                script {
+                    input(
+                        message: 'Yakin di approve nih boss?',
+                        ok: 'Yes, I am sure!'
+                    )
+                }
             }
         }
 
