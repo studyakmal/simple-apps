@@ -40,6 +40,12 @@ pipeline {
             }
         }
 
+        stage("Approval1") {
+            steps {
+                input message: 'Yakin di approve nih boss?', ok: 'Yes, I am sure!'
+            }
+        }
+
         stage('Deploy') {
             steps {
                 sh '''
