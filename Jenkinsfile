@@ -38,7 +38,6 @@ pipeline {
             }
         }
 
-
         stage('Code Review') {
             steps {
                 sh '''
@@ -56,7 +55,7 @@ pipeline {
             steps {
                 script {
                     input(
-                        message: 'Yakin di approve untuk Deploynih boss?',
+                        message: 'Yakin di approve untuk Deploy nih boss?',
                         ok: 'Yes, I am sure!'
                     )
                 }
