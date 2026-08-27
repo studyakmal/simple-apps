@@ -27,6 +27,18 @@ pipeline {
             }
         }
 
+        stage('Approval-Testing') {
+            steps {
+                script {
+                    input(
+                        message: 'Yakin di approve after testing nih boss?',
+                        ok: 'Yes, I am sure!'
+                    )
+                }
+            }
+        }
+
+
         stage('Code Review') {
             steps {
                 sh '''
@@ -40,11 +52,11 @@ pipeline {
             }
         }
 
-        stage('Approval1') {
+        stage('Approval-Deploy') {
             steps {
                 script {
                     input(
-                        message: 'Yakin di approve nih boss?',
+                        message: 'Yakin di approve untuk Deploynih boss?',
                         ok: 'Yes, I am sure!'
                     )
                 }
