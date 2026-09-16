@@ -27,16 +27,6 @@ pipeline {
             }
         }
 
-        stage('Approval-Testing') {
-            steps {
-                script {
-                    input(
-                        message: 'Yakin di approve after testing nih boss?',
-                        ok: 'Yes, I am sure!'
-                    )
-                }
-            }
-        }
 
         stage('Code Review') {
             steps {
@@ -51,16 +41,6 @@ pipeline {
             }
         }
 
-        stage('Approval-Deploy') {
-            steps {
-                script {
-                    input(
-                        message: 'Yakin di approve untuk Deploy nih boss?',
-                        ok: 'Yes, I am sure!'
-                    )
-                }
-            }
-        }
 
         stage('Deploy') {
             steps {
